@@ -1,16 +1,18 @@
 {
   "main": "node_modules/expo/AppEntry.js",
   "scripts": {
-    "start": "expo start",
-    "android": "expo start --android",
-    "ios": "expo start --ios",
-    "web": "expo start --web"
+    "server": "json-server --watch ./assets/questions.json --port 3001",
+    "start": "yarn server && expo start",
+    "android": "yarn server && expo start --android",
+    "ios": "yarn server & expo start --ios",
+    "web": "yarn server && expo start --web"
   },
   "dependencies": {
     "@react-navigation/native": "^6.0.13",
     "@react-navigation/native-stack": "^6.9.1",
     "expo": "~46.0.16",
     "expo-status-bar": "~1.4.0",
+    "json-server": "^1.0.0-alpha.23",
     "react": "18.0.0",
     "react-native": "0.69.6",
     "react-native-safe-area-context": "4.3.1",
